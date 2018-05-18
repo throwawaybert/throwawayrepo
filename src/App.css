@@ -28,6 +28,11 @@
     color: black;
 }
 
+.hidden-nav {
+    position: fixed;
+    z-index: -1;
+}
+
 .navbar-icon {
     margin: 12px;
 }
@@ -52,6 +57,9 @@
     margin: 15px;
     text-align: center;
     font: 1.5em 'Tajawal', sans-serif;
+    font-variant: small-caps;
+    display: flex;
+    flex-direction: column;
 }
 
 .navbar-link-item {
@@ -65,4 +73,22 @@
 
 .coffee-flexbox-container {
     display: flex;
+}
+
+.navbar-enter {
+    transform: translateX(-200px);
+}
+
+.navbar-enter.navbar-enter-active {
+    transform: translateX(0);
+    transition: transform 250ms cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.navbar-leave {
+    transform: translateX(0);
+}
+
+.navbar-leave.navbar-leave-active {
+    transform: translateX(-200px);
+    transition: transform 200ms cubic-bezier(0.4, 0.0, 1, 1);
 }

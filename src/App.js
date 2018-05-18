@@ -4,6 +4,7 @@ import '../src/App.css'
 
 import HiddenNavbar from './navbar/hiddenNavbar';
 import Navbar from './navbar/navbar';
+import { CSSTransitionGroup } from 'react-transition-group';
 
 
 class App extends Component {
@@ -23,12 +24,20 @@ class App extends Component {
   }
 
   render() {
-    const currentNavbar = (this.state.navbarOpened ? <Navbar onClick={this.toggleNavbar}/> : <HiddenNavbar onClick={this.toggleNavbar}/> )
+    const currentNavbar = (this.state.navbarOpened ? <Navbar onClick={this.toggleNavbar} key="active-nav"/> : <HiddenNavbar toggle={this.toggleNavbar} key="hidden-nav"/> )
 
     return (
       <Router>
         <div className="coffee-flexbox-container">
-          {currentNavbar}
+          <CSSTransitionGroup
+                transitionName="navbar"
+                transitionAppear={false}
+                transitionAppearTimeout={250}
+                transitionEnter={true}
+                transitionLeave={true}
+                transitionLeaveTimeout={200}>
+                  {currentNavbar}
+          </CSSTransitionGroup>
         </div>
       </Router>
     );

@@ -4,8 +4,8 @@ import React from 'react';
 class HiddenNavbar extends React.Component {
     render() {
         return (
-            <div>
-                <i class="material-icons navbar-icon" onClick={this.props.onClick}>menu</i>
+            <div className="hidden-nav nav-icon">
+                <i class="material-icons navbar-icon" onClick={this.props.toggle}>menu</i>
             </div>
         )
     }
