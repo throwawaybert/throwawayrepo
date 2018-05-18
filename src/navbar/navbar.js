@@ -11,7 +11,7 @@ class Navbar extends React.Component {
                     <i className="material-icons" onClick={this.props.onClick}>menu</i>
                 </div>
                 <div className="navbar-link-list">
-                    <NavLink to='/home'>Home</NavLink>
+                    <NavLink to='/home' className="navbar-link-item">Home</NavLink>
                 </div>
             </div>
         )

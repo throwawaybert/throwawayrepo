@@ -54,6 +54,10 @@
     font: 1.5em 'Tajawal', sans-serif;
 }
 
+.navbar-link-item {
+    color: black;
+    text-decoration: none;
+}
 .logo {
     margin: 12px;
     padding: 0;
