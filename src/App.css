@@ -1,0 +1,64 @@
+.primary {
+    background-color: #8d6e63;
+    color: black;
+}
+
+.primary__light {
+    background-color: #be9c91;
+    color: black;
+}
+
+.primary__dark {
+    background-color: #5f4339;
+    color: white;
+}
+
+.secondary {
+    background-color: #00c652;
+    color: black;
+}
+
+.secondary__light {
+    background-color: #5efa81;
+    color: black;
+}
+
+.secondary__dark {
+    background-color: #009423;
+    color: black;
+}
+
+.navbar-icon {
+    margin: 12px;
+}
+
+.navbar-icon:hover {
+    cursor: pointer;
+}
+
+.navbar-icon-pull-right {
+    float: right;
+    margin-left: auto;
+}
+
+.navbar-flex-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 200px;
+}
+
+.navbar-link-list {
+    margin: 15px;
+    text-align: center;
+    font: 1.5em 'Tajawal', sans-serif;
+}
+
+.logo {
+    margin: 12px;
+    padding: 0;
+}
+
+.coffee-flexbox-container {
+    display: flex;
+}
