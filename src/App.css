@@ -72,7 +72,7 @@
 }
 
 .navbar-link-list {
-    margin: 15px;
+    margin-top: 30px;
     text-align: center;
     font: 1.5em 'Tajawal', sans-serif;
     font-variant: small-caps;
@@ -110,9 +110,28 @@
     overflow: auto;
 }
 
+.page-body-navbar-closed {
+    margin: 64px 64px 64px 64px;
+    transform: translateX(0);
+    transition: transform 200ms cubic-bezier(0.4, 0.0, 1, 1), margin 200ms cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.page-body-navbar-open {
+    margin: 64px 64px 64px 0px;
+    transform: translateX(200px);
+    transition: transform 250ms cubic-bezier(0.0, 0.0, 0.2, 1), margin 250ms cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
 .page-body {
-    display: flex;
-    position: relative;
-    float: left;
-    margin: auto;
+    height: 500px;
+    width: 500px;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.438);
+    background-color:white;
+    color: black;
+    font-family: 'Tajawala', sans-serif;
+}
+
+.page-body:hover {
+    background-color: antiquewhite; 
+    transition: background-color 1000ms ease-in-out;
 }

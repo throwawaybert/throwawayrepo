@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import { CSSTransitionGroup } from 'react-transition-group';
 import '../src/App.css';
 import HiddenNavbar from './navbar/hiddenNavbar';
@@ -39,12 +39,7 @@ class App extends Component {
                         transitionLeaveTimeout={200}>
                             {currentNavbar}
                     </CSSTransitionGroup>
-                    <Switch>
-                        <Route path="/home" component={Page}/>
-                        <Route path="/brews"/>
-                        <Route path="/statistics"/>
-                        <Route path="/experiments"/>
-                    </Switch>
+                    <Page navbarOpen={this.state.navbarOpened}/>
                 </div>
               </Router>
         );
