@@ -7,9 +7,9 @@ class Navbar extends React.Component {
 
     render() {
         return (
-            <div className="primary__light navbar-flex-container">
+            <nav className="primary__light navbar-flex-container" onBlur={this.props.toggle}>
                 <div className="navbar-icon navbar-icon-pull-right">
-                    <i className="material-icons" onClick={this.props.onClick}>menu</i>
+                    <i className="material-icons" onClick={this.props.toggle}>menu</i>
                 </div>
                 <div className="navbar-link-list">
                     <NavLink to='/home' className="navbar-link-item">Home</NavLink>
@@ -17,7 +17,7 @@ class Navbar extends React.Component {
                     <NavLink to='/statistics' className="navbar-link-item">Statistics</NavLink>
                     <NavLink to='/experiments' className="navbar-link-item">Experiments</NavLink>
                 </div>
-            </div>
+            </nav>
         )
     }
 }
